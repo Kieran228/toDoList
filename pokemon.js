@@ -1,12 +1,12 @@
 async function fetchPokeData() {
-    let url = `https://pokeapi.co/api/v2/pokemon/mew`;
+    let url = `https://pokeapi.co/api/v2/pokemon/altaria`;
 
     //* Activates fetching 
     await fetch(url)
         .then(response => response.json())
         .then(data => {
             console.log(data.stats[4].stat.name);
-            displayPokemon(data.sprites.front_default);
+            displayPokemon(data.sprites.front_shiny);
         })
         .catch(error => {
             console.log(error);
